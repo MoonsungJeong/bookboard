@@ -180,7 +180,7 @@ express, express-session, bcrypt, validator, express-fileupload, body-parser, my
 |   |AccessRights|accessRights  |Varchar(200)   |N.N  |     |
 |   |Delete Flag |deleteFlag    |TinyInt(1)     |N.N  |default 0|
 
-|Book|   |   |   |   |
+|Book|   |   |   |   |   |
 |-- |------------|--------------|---------------|-----|-----|
 |Key|Logical_Name|Physical_Name |Datatype       |NULL?|Opt  |
 | P |Book ID     |bookID        |INT(10)        |N.N  |A.I  |
@@ -193,7 +193,7 @@ express, express-session, bcrypt, validator, express-fileupload, body-parser, my
 | F |Author ID   |authorID      |INT(10)        |N.N  |     |
 |   |Delete Flag |deleteFlag    |TinyInt(1)     |N.N  |default 0|
 
-|Author|   |   |   |   |
+|Author|   |   |   |   |   |
 |-- |------------|--------------|---------------|-----|-----|
 |Key|Logical_Name|Physical_Name |Datatype       |NULL?|Opt  |
 | P |Author ID   |authorID      |INT(10)        |N.N  |A.I  |
@@ -204,7 +204,7 @@ express, express-session, bcrypt, validator, express-fileupload, body-parser, my
 |   |DeathYear   |deathyear     |INT(10)        |NULL |     |
 |   |Delete Flag |deleteFlag    |TinyInt(1)     |N.N  |default 0|
 
-|Log|   |   |   |   |
+|Log|   |   |   |   |   |
 |-- |------------|--------------|---------------|-----|-----|
 |Key|Logical_Name|Physical_Name |Datatype       |NULL?|Opt  |
 | P |Log ID      |logID         |INT(10)        |N.N  |A.I  |
