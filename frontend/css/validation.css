@@ -1,0 +1,25 @@
+.required::after {
+    content: ' *';
+    color: red;
+    font-weight: bold;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:optional {
+    border: 2px solid rgb(135, 206, 235);
+}
+
+.err.no_pass::before {
+    content: '\f057  Please Check it again';
+    font-family: "Font Awesome 5 Free";
+    color: red;
+}
+
+.err.pass::before {
+    content: '\f058';
+    font-family: "Font Awesome 5 Free";
+    color: green;
+}

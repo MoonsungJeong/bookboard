@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/validation.css">
+    <!-- JS -->
+    <script defer src="js/update_book.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/logout.js"></script>
+    <script defer src="js/validation_check.js"></script>
+
+    <title>Books - update book</title>
+</head>
+
+<body>
+    <nav id="nav-menu" class="b-color-3 navbar navbar-expand-lg navbar-light">
+    </nav>
+    <main class="container-fluid p-3">
+        <h1>Update book</h1>
+        <form id="update-book-form" autocomplete="off"
+            class="border border-info border-3 rounded p-3 mb-5 mx-auto max-w-30">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <i class="fas fa-heading required"></i>
+                <input type="text" class="form-control" id="title" name="title"
+                    title="Must contain first uppercase letter, no special characters"
+                    pattern="^[A-Z]{1}[a-zA-Z0-9_ ]*$" onkeyup="check(this)" required>
+                <div class="err"></div>
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <i class="fas fa-user-edit required"></i>
+                <select class="form-select" id="author" name="author" onchange="option_check(this)">
+                    <option selected>Choose...</option>
+                </select>
+                <div class="err"></div>
+            </div>
+            <div class="mb-3">
+                <label for="genre" class="form-label">Genre</label>
+                <i class="fas fa-book required"></i>
+                <input type="text" class="form-control" id="genre" name="genre"
+                    title="Must contain first uppercase letter, no number and no special characters"
+                    pattern="^[A-Z]{1}[a-zA-Z_ ]*$" onkeyup="check(this)" required>
+                <div class="err"></div>
+            </div>
+            <div class="mb-3">
+                <label for="yearofpublication" class="form-label">Year of Publication</label>
+                <i class="fas fa-print required"></i>
+                <input type="text" class="form-control" id="yearofpublication" name="yearofpublication"
+                    title="Must contain Time format ex) YYYY" pattern="^[0-9]{4}$" onkeyup="check(this)" required>
+                <div class="err"></div>
+            </div>
+            <div class="mb-3">
+                <label for="millionsold" class="form-label">Sold</label>
+                <i class="fas fa-list-ol required"></i>
+                <input type="text" class="form-control" id="millionsold" name="millionsold"
+                    title="Must contain Number format ex) 1234" pattern="^[0-9]{1,}$" onkeyup="check(this)" required>
+                <div class="err"></div>
+            </div>
+            <div class="mb-3">
+                <label for="languagewritten" class="form-label">Language</label>
+                <i class="fas fa-language required"></i>
+                <input type="text" class="form-control" id="languagewritten" name="languagewritten"
+                    title="Must contain first uppercase letter and at least two letter" pattern="[A-Z]{1}[a-zA-Z]{1,}"
+                    onkeyup="check(this)" required>
+                <div class="err"></div>
+            </div>
+            <div class="mb-3">
+                <label for="coverimagepath" class="form-label">Update Cover Image <span
+                        class="fst-italic f-color-gray">(If no update, keep original image)</span></label>
+                <i class="far fa-image"></i>
+                <input type="file" class="form-control" id="coverimagepath" name="coverimagepath">
+            </div>
+            <input type="hidden" class="form-control" id="bookId" name="bookId">
+            <button type="button" class="btn btn-primary" onclick="postUpdateBook()">Submit</button>
+        </form>
+    </main>
+    <footer id="footer" class="footer d-flex flex-wrap justify-content-between align-items-center py-3 px-3 border-top">
+    </footer>
+
+</body>
+
+</html>
