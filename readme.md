@@ -20,11 +20,13 @@ This is 2nd web board project with **Node.js**.
 
 * server.js
 * books.sql
+* backend/database.js
 
 #### 1-2. Process to set up
 ##### ①. "npm install" to install modules into node_modules
 ##### ②. Check port number in "server.js" line 8
 ##### ③. Use SQL in "books.sql" to set up database structure and insert example data into database (IP adress is "localhost" or "127.0.0.1")
+##### ④. Modify database information (line 6:host, line 7:user, line 8:password) in backend/database.js file
 
 #### 1-3. Login information (default)
 |  |  |  |
